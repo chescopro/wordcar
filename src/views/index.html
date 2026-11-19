@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090909">
+  <meta name="description" content="WolrdCar: una experiencia exclusiva de movilidad de alta gama.">
+  <title>WolrdCar — La elegancia en movimiento</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=El+Messiri:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+  <main class="landing">
+    <header class="navbar">
+      <a class="brand" href="#" aria-label="WolrdCar, inicio">
+        <span class="brand-emblem" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none">
+            <path d="M24 3.5 44.5 24 24 44.5 3.5 24 24 3.5Z" stroke="currentColor"/>
+            <path d="M24 11 37 24 24 37 11 24 24 11Z" stroke="currentColor" stroke-width=".7"/>
+            <path d="m17 18 4.3 12L24 23l2.7 7L31 18" stroke="currentColor" stroke-width="1.2"/>
+          </svg>
+        </span>
+        <span class="brand-wordmark">WOLRdCAR<span>PRIVATE MOTORS</span></span>
+      </a>
+
+      <nav class="navigation" aria-label="Navegación principal">
+        <a href="#catalogo">Catálogo</a>
+        <a href="#sedes">Sedes</a>
+        <a href="#repuestos">Repuestos</a>
+        <a href="#testimonios">Testimonios</a>
+        <a href="#contacto">Contacto</a>
+        <a href="#telefono">Teléfono</a>
+      </nav>
+
+      <a class="login-link" href="#login">
+        <span>Login</span>
+        <span class="login-icon" aria-hidden="true">↗</span>
+      </a>
+    </header>
+
+    <section class="hero" aria-label="Selección exclusiva de vehículos WolrdCar">
+      <div class="slides" aria-live="polite">
+        <article class="slide is-active" aria-label="1 de 5">
+          <img src="../assets/images/mintosko-hCR4gQDDYIA-unsplash.jpg" alt="Sedán negro de lujo WolrdCar">
+        </article>
+        <article class="slide" aria-label="2 de 5" aria-hidden="true">
+          <img src="../assets/images/meik-schneider-e9zSM8orIfA-unsplash.jpg" alt="Deportivo amarillo de alta gama">
+        </article>
+        <article class="slide" aria-label="3 de 5" aria-hidden="true">
+          <img src="../assets/images/d-panyukov-xZJ6uV5F4_k-unsplash.jpg" alt="Todoterreno de lujo frente a las montañas">
+        </article>
+        <article class="slide" aria-label="4 de 5" aria-hidden="true">
+          <img src="../assets/images/aaron-huber-8qYE6LGHW-c-unsplash.jpg" alt="Coupé deportivo gris de alto rendimiento">
+        </article>
+        <article class="slide" aria-label="5 de 5" aria-hidden="true">
+          <img src="../assets/images/aaron-huber-7Nsarl91394-unsplash.jpg" alt="Coupé de lujo visto de perfil">
+        </article>
+      </div>
+
+      <div class="image-shade" aria-hidden="true"></div>
+      <div class="ornament ornament-left" aria-hidden="true"></div>
+      <div class="ornament ornament-right" aria-hidden="true"></div>
+
+      <div class="hero-copy">
+        <p class="overline"><span></span> Excelencia sobre ruedas</p>
+        <h1>El arte de<br><em>llegar más lejos.</em></h1>
+        <p class="description">Una selección extraordinaria. Una experiencia hecha a tu medida.</p>
+        <a class="cta" href="#catalogo">
+          <span>Descubrir colección</span>
+          <span class="cta-arrow" aria-hidden="true">↗</span>
+        </a>
+      </div>
+
+      <div class="hero-caption" aria-hidden="true">
+        <span>WOLRCAR / EDICIÓN PRIVADA</span>
+        <span>LUJO SIN CONCESIONES</span>
+      </div>
+
+      <div class="carousel-controls" aria-label="Controles del carrusel">
+        <span class="slide-index"><span id="current-slide">01</span><i></i>05</span>
+        <div class="pagination" role="group" aria-label="Seleccionar vehículo">
+          <button type="button" class="pagination-dot is-active" aria-label="Mostrar vehículo 1" aria-current="true"></button>
+          <button type="button" class="pagination-dot" aria-label="Mostrar vehículo 2"></button>
+          <button type="button" class="pagination-dot" aria-label="Mostrar vehículo 3"></button>
+          <button type="button" class="pagination-dot" aria-label="Mostrar vehículo 4"></button>
+          <button type="button" class="pagination-dot" aria-label="Mostrar vehículo 5"></button>
+        </div>
+        <div class="arrows">
+          <button type="button" class="arrow" data-step="-1" aria-label="Vehículo anterior">←</button>
+          <button type="button" class="arrow" data-step="1" aria-label="Vehículo siguiente">→</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="subscribe" id="suscribirse" aria-labelledby="subscribe-title">
+      <div class="subscribe-copy">
+        <p class="overline"><span></span> Acceso privado</p>
+        <h2 id="subscribe-title">El lujo, en tu <em>correo.</em></h2>
+        <p>Recibe novedades, lanzamientos exclusivos y experiencias seleccionadas de WolrdCar.</p>
+      </div>
+      <form class="subscribe-form">
+        <label for="subscribe-email">Tu correo electrónico</label>
+        <div class="subscribe-input-group">
+          <input
+            id="subscribe-email"
+            name="email"
+            type="email"
+            placeholder="nombre@correo.com"
+            autocomplete="email"
+            required
+          >
+          <button type="submit">Suscribirme <span aria-hidden="true">↗</span></button>
+        </div>
+        <p class="subscribe-note">Al suscribirte, aceptas recibir comunicaciones de WolrdCar.</p>
+        <p class="subscribe-status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+  <script src="../assets/js/script.js"></script>
+</body>
+</html>
