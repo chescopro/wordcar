@@ -703,6 +703,69 @@ h1 em {
   text-align: center;
 }
 
+.parts {
+  padding: 90px 7.2% 110px;
+  border-top: 1px solid rgb(200 168 106 / 18%);
+  background:
+    radial-gradient(ellipse at 18% 80%, rgb(162 45 99 / 8%), transparent 30%),
+    var(--black-soft);
+}
+
+.parts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.part-card {
+  position: relative;
+  min-height: 270px;
+  overflow: hidden;
+  border: 1px solid rgb(200 168 106 / 25%);
+  background: #1a1917;
+  transition: border-color 220ms ease, transform 220ms ease;
+}
+
+.part-card::after {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgb(9 9 9 / 88%), transparent 65%);
+  content: "";
+  pointer-events: none;
+}
+
+.part-card:hover {
+  border-color: rgb(200 168 106 / 65%);
+  transform: translateY(-4px);
+}
+
+.part-card img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(0.78);
+  transition: filter 300ms ease, transform 700ms ease;
+}
+
+.part-card:hover img {
+  filter: saturate(1);
+  transform: scale(1.04);
+}
+
+.part-card h3 {
+  position: absolute;
+  z-index: 1;
+  right: 20px;
+  bottom: 17px;
+  left: 20px;
+  margin: 0;
+  color: var(--white);
+  font-family: var(--display);
+  font-size: clamp(18px, 2vw, 25px);
+  font-weight: 500;
+}
+
 .locations {
   padding: 90px 7.2% 110px;
   border-top: 1px solid rgb(200 168 106 / 18%);
@@ -943,6 +1006,10 @@ button:focus-visible {
     padding: 70px 6% 80px;
   }
 
+  .parts {
+    padding: 70px 6% 80px;
+  }
+
   .locations {
     padding: 70px 6% 80px;
   }
@@ -978,6 +1045,10 @@ button:focus-visible {
   }
 
   .catalog-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .parts-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -1098,6 +1169,10 @@ button:focus-visible {
 
   .catalog-grid {
     grid-template-columns: 1fr;
+  }
+
+  .part-card {
+    min-height: 210px;
   }
 
   .locations-grid {
