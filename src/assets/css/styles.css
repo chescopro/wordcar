@@ -412,8 +412,8 @@ h1 em {
 .subscribe {
   position: relative;
   display: grid;
-  min-height: 330px;
-  padding: 72px 12.2%;
+  min-height: 290px;
+  padding: 58px 12.2%;
   grid-template-columns: 1fr minmax(300px, 0.9fr);
   align-items: center;
   gap: 8%;
@@ -525,7 +525,7 @@ h1 em {
 }
 
 .catalog {
-  padding: 90px 7.2% 110px;
+  padding: 72px 7.2% 82px;
   border-top: 1px solid rgb(200 168 106 / 18%);
   background:
     radial-gradient(ellipse at 82% 18%, rgb(162 45 99 / 8%), transparent 28%),
@@ -534,7 +534,7 @@ h1 em {
 
 .catalog-heading {
   display: grid;
-  margin-bottom: 38px;
+  margin-bottom: 30px;
   grid-template-columns: 1fr 0.55fr;
   align-items: end;
   gap: 40px;
@@ -624,11 +624,10 @@ h1 em {
   overflow: hidden;
   border: 1px solid rgb(200 168 106 / 18%);
   background: var(--black-soft);
-  transition: transform 220ms ease, border-color 220ms ease;
+  transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
 }
 
 .vehicle-card:hover {
-  border-color: rgb(200 168 106 / 55%);
   transform: translateY(-5px);
 }
 
@@ -704,7 +703,7 @@ h1 em {
 }
 
 .parts {
-  padding: 90px 7.2% 110px;
+  padding: 72px 7.2% 82px;
   border-top: 1px solid rgb(200 168 106 / 18%);
   background:
     radial-gradient(ellipse at 18% 80%, rgb(162 45 99 / 8%), transparent 30%),
@@ -723,7 +722,7 @@ h1 em {
   overflow: hidden;
   border: 1px solid rgb(200 168 106 / 25%);
   background: #1a1917;
-  transition: border-color 220ms ease, transform 220ms ease;
+  transition: border-color 220ms ease, transform 220ms ease, box-shadow 220ms ease;
 }
 
 .part-card::after {
@@ -735,7 +734,6 @@ h1 em {
 }
 
 .part-card:hover {
-  border-color: rgb(200 168 106 / 65%);
   transform: translateY(-4px);
 }
 
@@ -767,7 +765,7 @@ h1 em {
 }
 
 .locations {
-  padding: 90px 7.2% 110px;
+  padding: 72px 7.2% 82px;
   border-top: 1px solid rgb(200 168 106 / 18%);
   background:
     radial-gradient(ellipse at 18% 80%, rgb(162 45 99 / 8%), transparent 30%),
@@ -776,7 +774,7 @@ h1 em {
 
 .locations-heading {
   display: grid;
-  margin-bottom: 38px;
+  margin-bottom: 30px;
   grid-template-columns: 1fr 0.55fr;
   align-items: end;
   gap: 40px;
@@ -823,12 +821,18 @@ h1 em {
   align-items: flex-start;
   border: 1px solid rgb(200 168 106 / 25%);
   background: linear-gradient(145deg, rgb(200 168 106 / 5%), transparent 60%), var(--black);
-  transition: border-color 220ms ease, transform 220ms ease;
+  transition: border-color 220ms ease, transform 220ms ease, box-shadow 220ms ease;
 }
 
 .location-card:hover {
-  border-color: rgb(200 168 106 / 60%);
   transform: translateY(-4px);
+}
+
+.vehicle-card:hover,
+.part-card:hover,
+.location-card:hover {
+  border-color: var(--gold-light);
+  box-shadow: 0 0 0 1px rgb(226 202 149 / 70%), 0 0 18px rgb(200 168 106 / 18%);
 }
 
 .location-region {
@@ -997,21 +1001,21 @@ button:focus-visible {
   }
 
   .subscribe {
-    padding: 58px 9%;
+    padding: 48px 9%;
     grid-template-columns: 1fr;
-    gap: 30px;
+    gap: 24px;
   }
 
   .catalog {
-    padding: 70px 6% 80px;
+    padding: 54px 6% 62px;
   }
 
   .parts {
-    padding: 70px 6% 80px;
+    padding: 54px 6% 62px;
   }
 
   .locations {
-    padding: 70px 6% 80px;
+    padding: 54px 6% 62px;
   }
 
   .catalog-heading {
@@ -1149,7 +1153,7 @@ button:focus-visible {
   }
 
   .subscribe {
-    padding: 50px 7%;
+    padding: 42px 7%;
   }
 
   .catalog-filters {
