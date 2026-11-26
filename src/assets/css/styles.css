@@ -813,6 +813,125 @@ h1 em {
   gap: 28px;
 }
 
+.testimonials {
+  padding: 72px 7.2% 82px;
+  border-top: 1px solid rgb(200 168 106 / 18%);
+  background:
+    radial-gradient(ellipse at 82% 50%, rgb(162 45 99 / 8%), transparent 32%),
+    var(--black);
+}
+
+.testimonial-carousel {
+  width: min(820px, 100%);
+  margin: 0 auto;
+}
+
+.testimonial-slide {
+  min-height: 270px;
+  padding: clamp(30px, 5vw, 54px);
+  border: 1px solid rgb(200 168 106 / 30%);
+  background: linear-gradient(145deg, rgb(200 168 106 / 5%), transparent 60%), var(--black-soft);
+  text-align: center;
+}
+
+.testimonial-slide[hidden] {
+  display: none;
+}
+
+.testimonial-rating {
+  margin: 0;
+  color: var(--gold-light);
+  font-size: 17px;
+  letter-spacing: 0.22em;
+}
+
+.testimonial-slide blockquote {
+  max-width: 650px;
+  margin: 22px auto 24px;
+  color: #ded8cd;
+  font-family: var(--arabesque);
+  font-size: clamp(17px, 2vw, 21px);
+  line-height: 1.8;
+}
+
+.testimonial-customer {
+  margin: 0 0 5px;
+  color: var(--white);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.testimonial-vehicle {
+  margin: 0;
+  color: var(--gold-light);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+}
+
+.testimonial-controls {
+  display: flex;
+  margin-top: 22px;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+}
+
+.testimonial-arrow {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  border: 1px solid rgb(200 168 106 / 47%);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--gold-light);
+  cursor: pointer;
+  font-size: 15px;
+  place-items: center;
+  transition: background 180ms ease, border-color 180ms ease, color 180ms ease;
+}
+
+.testimonial-arrow:hover {
+  border-color: var(--gold-light);
+  background: var(--gold);
+  color: var(--black);
+}
+
+.testimonial-pagination {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.testimonial-dot {
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border: 1px solid var(--gold);
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+}
+
+.testimonial-dot.is-active,
+.testimonial-dot:hover {
+  background: var(--gold-light);
+}
+
+.testimonial-count {
+  color: var(--muted);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+}
+
+.testimonial-note {
+  margin: 15px 0 0;
+  color: var(--muted);
+  font-size: 10px;
+  text-align: center;
+}
+
 .location-card {
   display: flex;
   min-height: 270px;
@@ -1018,6 +1137,10 @@ button:focus-visible {
     padding: 54px 6% 62px;
   }
 
+  .testimonials {
+    padding: 54px 6% 62px;
+  }
+
   .catalog-heading {
     grid-template-columns: 1fr;
     gap: 12px;
@@ -1058,6 +1181,11 @@ button:focus-visible {
 
   .locations-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .testimonial-slide {
+    min-height: 0;
+    padding: 30px 22px;
   }
 
   .vehicle-image {
@@ -1173,6 +1301,24 @@ button:focus-visible {
 
   .catalog-grid {
     grid-template-columns: 1fr;
+  }
+
+  .testimonial-controls {
+    gap: 8px;
+  }
+
+  .testimonial-pagination {
+    gap: 5px;
+  }
+
+  .testimonial-dot {
+    width: 8px;
+    height: 8px;
+  }
+
+  .testimonial-arrow {
+    width: 32px;
+    height: 32px;
   }
 
   .part-card {
