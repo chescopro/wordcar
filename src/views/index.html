@@ -389,6 +389,47 @@
       </div>
     </section>
 
+    <section class="contact" id="contacto" aria-labelledby="contact-title">
+      <div class="catalog-heading">
+        <div>
+          <p class="overline"><span></span> Estamos para ayudarte</p>
+          <h2 id="contact-title">Contactos.</h2>
+        </div>
+        <p>Envíanos tu consulta y nuestro equipo podrá orientarte.</p>
+      </div>
+
+      <form class="contact-form">
+        <div class="contact-fields">
+          <label class="contact-field" for="contact-name">
+            <span>Nombre completo</span>
+            <input id="contact-name" name="name" type="text" autocomplete="name" required>
+          </label>
+          <label class="contact-field" for="contact-email">
+            <span>E-mail</span>
+            <input id="contact-email" name="email" type="email" autocomplete="email" required>
+          </label>
+          <label class="contact-field contact-field-wide" for="contact-subject">
+            <span>Asunto</span>
+            <select id="contact-subject" name="subject">
+              <option value="" selected disabled>Selecciona un asunto</option>
+              <option value="informacion">Información</option>
+              <option value="reclamo">Reclamo</option>
+              <option value="presupuesto">Presupuesto</option>
+              <option value="contacto">Contacto</option>
+            </select>
+          </label>
+          <label class="contact-field contact-field-wide" for="contact-message">
+            <span>Mensaje</span>
+            <textarea id="contact-message" name="message" rows="6" required></textarea>
+          </label>
+        </div>
+        <div class="contact-submit">
+          <button type="submit">Enviar mensaje <span aria-hidden="true">↗</span></button>
+          <p class="contact-status" role="status" aria-live="polite"></p>
+        </div>
+      </form>
+    </section>
+
     <dialog class="location-dialog" aria-labelledby="location-dialog-title">
       <div class="location-dialog-heading">
         <h2 id="location-dialog-title"></h2>

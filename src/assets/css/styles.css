@@ -932,6 +932,119 @@ h1 em {
   text-align: center;
 }
 
+.contact {
+  padding: 72px 7.2% 82px;
+  border-top: 1px solid rgb(200 168 106 / 18%);
+  background:
+    radial-gradient(ellipse at 18% 80%, rgb(162 45 99 / 8%), transparent 30%),
+    var(--black-soft);
+}
+
+.contact-form {
+  width: min(860px, 100%);
+  margin: 0 auto;
+  padding: clamp(24px, 4vw, 40px);
+  border: 1px solid rgb(200 168 106 / 25%);
+  background: rgb(9 9 9 / 48%);
+}
+
+.contact-fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px 24px;
+}
+
+.contact-field {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.contact-field-wide {
+  grid-column: 1 / -1;
+}
+
+.contact-field span {
+  color: var(--gold-light);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.contact-field input,
+.contact-field select,
+.contact-field textarea {
+  width: 100%;
+  min-height: 48px;
+  padding: 12px 14px;
+  border: 1px solid rgb(200 168 106 / 34%);
+  border-radius: 0;
+  outline: 0;
+  background: var(--black);
+  color: var(--white);
+  font: inherit;
+  font-size: 12px;
+}
+
+.contact-field select {
+  cursor: pointer;
+}
+
+.contact-field select option {
+  background: var(--black-soft);
+  color: var(--white);
+}
+
+.contact-field textarea {
+  min-height: 150px;
+  resize: vertical;
+  line-height: 1.7;
+}
+
+.contact-field input:focus,
+.contact-field select:focus,
+.contact-field textarea:focus {
+  border-color: var(--gold-light);
+  box-shadow: 0 0 0 2px rgb(226 202 149 / 16%);
+}
+
+.contact-submit {
+  display: flex;
+  margin-top: 24px;
+  align-items: center;
+  gap: 18px;
+}
+
+.contact-submit button {
+  display: inline-flex;
+  min-height: 48px;
+  padding: 0 18px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  border: 1px solid var(--gold);
+  background: var(--gold);
+  color: var(--black);
+  cursor: pointer;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  transition: background 180ms ease, color 180ms ease;
+}
+
+.contact-submit button:hover {
+  background: var(--gold-light);
+}
+
+.contact-status {
+  margin: 0;
+  color: var(--gold-light);
+  font-size: 11px;
+  line-height: 1.6;
+}
+
 .location-card {
   display: flex;
   min-height: 270px;
@@ -1141,6 +1254,10 @@ button:focus-visible {
     padding: 54px 6% 62px;
   }
 
+  .contact {
+    padding: 54px 6% 62px;
+  }
+
   .catalog-heading {
     grid-template-columns: 1fr;
     gap: 12px;
@@ -1282,6 +1399,19 @@ button:focus-visible {
 
   .subscribe {
     padding: 42px 7%;
+  }
+
+  .contact-fields {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-field-wide {
+    grid-column: auto;
+  }
+
+  .contact-submit {
+    align-items: flex-start;
+    flex-direction: column;
   }
 
   .catalog-filters {

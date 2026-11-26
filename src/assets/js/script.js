@@ -6,6 +6,8 @@
   const hero = document.querySelector(".hero");
   const subscribeForm = document.querySelector(".subscribe-form");
   const subscribeStatus = document.querySelector(".subscribe-status");
+  const contactForm = document.querySelector(".contact-form");
+  const contactStatus = document.querySelector(".contact-status");
   const catalogFilters = Array.from(document.querySelectorAll("[data-filter]"));
   const vehicleCards = Array.from(document.querySelectorAll(".vehicle-card"));
   const catalogStatus = document.querySelector(".catalog-status");
@@ -49,6 +51,17 @@
     subscribeForm.addEventListener("submit", (event) => {
       event.preventDefault();
       subscribeStatus.textContent = "El formulario está listo, pero aún falta conectar el servicio de registro.";
+    });
+  }
+
+  if (contactForm && contactStatus) {
+    contactForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+      contactStatus.textContent = "Tu mensaje está listo, pero aún falta conectar un servicio para enviarlo.";
+    });
+
+    contactForm.addEventListener("input", () => {
+      contactStatus.textContent = "";
     });
   }
 
