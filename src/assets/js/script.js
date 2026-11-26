@@ -6,13 +6,69 @@
   const hero = document.querySelector(".hero");
   const subscribeForm = document.querySelector(".subscribe-form");
   const subscribeStatus = document.querySelector(".subscribe-status");
+  const catalogFilters = Array.from(document.querySelectorAll("[data-filter]"));
+  const vehicleCards = Array.from(document.querySelectorAll(".vehicle-card"));
+  const catalogStatus = document.querySelector(".catalog-status");
+  const locationDialog = document.querySelector(".location-dialog");
+  const locationDialogTitle = document.querySelector("#location-dialog-title");
+  const locationMap = locationDialog?.querySelector("iframe");
+  const locationDirections = locationDialog?.querySelector(".location-directions");
+  const locationCloseButton = locationDialog?.querySelector(".location-dialog-close");
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+  if (locationDialog && locationDialogTitle && locationMap && locationDirections && locationCloseButton) {
+    document.querySelectorAll(".location-map-button").forEach((button) => {
+      button.addEventListener("click", () => {
+        const { location, coordinates } = button.dataset;
+        if (!location || !coordinates) return;
+
+        const query = encodeURIComponent(coordinates);
+        locationDialogTitle.textContent = location;
+        locationMap.src = `https://maps.google.com/maps?q=${query}&z=15&output=embed`;
+        locationDirections.href = `https://www.google.com/maps/search/?api=1&query=${query}`;
+        locationDialog.showModal();
+      });
+    });
+
+    locationCloseButton.addEventListener("click", () => locationDialog.close());
+    locationDialog.addEventListener("click", (event) => {
+      if (event.target === locationDialog) locationDialog.close();
+    });
+    locationDialog.addEventListener("close", () => {
+      locationMap.removeAttribute("src");
+    });
+  }
 
   if (subscribeForm && subscribeStatus) {
     subscribeForm.addEventListener("submit", (event) => {
       event.preventDefault();
       subscribeStatus.textContent = "El formulario está listo, pero aún falta conectar el servicio de registro.";
     });
+  }
+
+  if (catalogFilters.length && vehicleCards.length) {
+    const filterCatalog = () => {
+      const filters = Object.fromEntries(
+        catalogFilters.map((filter) => [filter.dataset.filter, filter.value])
+      );
+      let visibleCount = 0;
+
+      vehicleCards.forEach((card) => {
+        const matches = Object.entries(filters).every(([key, value]) =>
+          !value || card.dataset[key] === value
+        );
+        card.classList.toggle("is-hidden", !matches);
+        if (matches) visibleCount += 1;
+      });
+
+      if (catalogStatus) {
+        catalogStatus.textContent = visibleCount === vehicleCards.length
+          ? ""
+          : `${visibleCount} vehículo${visibleCount === 1 ? "" : "s"} encontrado${visibleCount === 1 ? "" : "s"}`;
+      }
+    };
+
+    catalogFilters.forEach((filter) => filter.addEventListener("change", filterCatalog));
   }
 
   if (!slides.length || slides.length !== dots.length || !counter || !controls || !hero) {

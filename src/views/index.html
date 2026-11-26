@@ -117,7 +117,164 @@
         <p class="subscribe-status" role="status" aria-live="polite"></p>
       </form>
     </section>
+
+    <section class="catalog" id="catalogo" aria-labelledby="catalog-title">
+      <div class="catalog-heading">
+        <div>
+          <p class="overline"><span></span> Selección WolrdCar</p>
+          <h2 id="catalog-title">Catálogo <em>exclusivo.</em></h2>
+        </div>
+        <p>Encuentra el vehículo que representa tu manera de llegar más lejos.</p>
+      </div>
+
+      <div class="catalog-filters" aria-label="Filtros del catálogo">
+        <label>
+          <span>Marca</span>
+          <select name="marca" data-filter="brand">
+            <option value="">Todas las marcas</option>
+            <option value="Mercedes-Benz">Mercedes-Benz</option>
+            <option value="Alfa Romeo">Alfa Romeo</option>
+            <option value="Ferrari">Ferrari</option>
+            <option value="Jaguar">Jaguar</option>
+          </select>
+        </label>
+        <label>
+          <span>Modelo</span>
+          <select name="modelo" data-filter="model">
+            <option value="">Todos los modelos</option>
+            <option value="Sedán">Sedán</option>
+            <option value="Coupé">Coupé</option>
+            <option value="SUV">SUV</option>
+            <option value="Deportivo">Deportivo</option>
+          </select>
+        </label>
+          <label>
+          <span>Color</span>
+          <select name="color" data-filter="color">
+            <option value="">Todos los colores</option>
+            <option value="Negro">Negro</option>
+            <option value="Blanco">Blanco</option>
+            <option value="Rojo">Rojo</option>
+            <option value="Azul">Azul</option>
+          </select>
+        </label>
+          </select>
+        </label>
+      
+        <label>
+          <span>Año</span>
+          <select name="ano" data-filter="year">
+            <option value="">Todos los años</option>
+            <option value="2026">2026</option>
+            <option value="2025">2025</option>
+            <option value="2024">2024</option>
+            <option value="2023">2023</option>
+          </select>
+        </label>
+        <label>
+          <span>Condiciones</span>
+          <select name="condiciones" data-filter="condition">
+            <option value="">Todas las condiciones</option>
+            <option value="Nuevo">Nuevo</option>
+            <option value="Seminuevo">Seminuevo</option>
+            <option value="Certificado">Certificado</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="catalog-grid">
+        <article class="vehicle-card" data-brand="Mercedes-Benz" data-model="Sedán" data-year="2026" data-condition="Nuevo">
+          <div class="vehicle-image"><img src="../assets/images/catalogocars/photo-1503736334956-4c8f8e92946d.avif" alt="Mercedes-Benz Sedán negro"></div>
+          <div class="vehicle-info"><p>Mercedes-Benz</p><h3>Clase S 2026</h3><div><span>Nuevo</span><strong>$ 145.000</strong></div></div>
+        </article>
+        <article class="vehicle-card" data-brand="Porsche" data-model="Deportivo" data-year="2025" data-condition="Nuevo">
+          <div class="vehicle-image"><img src="../assets/images/catalogocars/photo-1542362567-b07e54358753.avif" alt="Porsche deportivo amarillo"></div>
+          <div class="vehicle-info"><p>Porsche</p><h3>911 Carrera 2025</h3><div><span>Nuevo</span><strong>$ 178.000</strong></div></div>
+        </article>
+        <article class="vehicle-card" data-brand="Range Rover" data-model="SUV" data-year="2026" data-condition="Nuevo">
+          <div class="vehicle-image"><img src="../assets/images/catalogocars/photo-1583121274602-3e2820c69888.avif" alt="Range Rover todoterreno"></div>
+          <div class="vehicle-info"><p>Range Rover</p><h3>Autobiography 2026</h3><div><span>Nuevo</span><strong>$ 168.500</strong></div></div>
+        </article>
+        <article class="vehicle-card" data-brand="BMW" data-model="Coupé" data-year="2024" data-condition="Certificado">
+          <div class="vehicle-image"><img src="../assets/images/catalogocars/photo-1629323487410-c1abe62ea9ba.avif" alt="BMW coupé deportivo gris"></div>
+          <div class="vehicle-info"><p>BMW</p><h3>M4 Competition 2024</h3><div><span>Certificado</span><strong>$ 119.000</strong></div></div>
+        </article>
+        <article class="vehicle-card" data-brand="Porsche" data-model="Coupé" data-year="2024" data-condition="Seminuevo">
+          <div class="vehicle-image"><img src="../assets/images/catalogocars/photo-1617654112368-307921291f42.avif" alt="Porsche coupé de lujo"></div>
+          <div class="vehicle-info"><p>Porsche</p><h3>Taycan 4S 2024</h3><div><span>Seminuevo</span><strong>$ 132.500</strong></div></div>
+        </article>
+        <article class="vehicle-card" data-brand="Audi" data-model="Deportivo" data-year="2025" data-condition="Nuevo">
+          <div class="vehicle-image"><img src="../assets/images/catalogocars/photo-1617654112368-307921291f42.avif" alt="Audi deportivo de alta gama"></div>
+          <div class="vehicle-info"><p>Audi</p><h3>R8 V10 2025</h3><div><span>Nuevo</span><strong>$ 192.000</strong></div></div>
+        </article>
+        <article class="vehicle-card" data-brand="BMW" data-model="Sedán" data-year="2023" data-condition="Certificado">
+          <div class="vehicle-image"><img src="../assets/images/martin-katler-y3neNkE6efI-unsplash.jpg" alt="BMW sedán premium"></div>
+          <div class="vehicle-info"><p>BMW</p><h3>Serie 7 2023</h3><div><span>Certificado</span><strong>$ 98.500</strong></div></div>
+        </article>
+        <article class="vehicle-card" data-brand="Mercedes-Benz" data-model="SUV" data-year="2024" data-condition="Seminuevo">
+          <div class="vehicle-image"><img src="../assets/images/meik-schneider-e9zSM8orIfA-unsplash.jpg" alt="Mercedes-Benz SUV de lujo"></div>
+          <div class="vehicle-info"><p>Mercedes-Benz</p><h3>Clase G 2024</h3><div><span>Seminuevo</span><strong>$ 155.000</strong></div></div>
+        </article>
+        <article class="vehicle-card" data-brand="Audi" data-model="SUV" data-year="2026" data-condition="Nuevo">
+          <div class="vehicle-image"><img src="../assets/images/catalogocars/premium_photo-1737559694289-955ffb75cfac.avif" alt="Audi SUV premium"></div>
+          <div class="vehicle-info"><p>Audi</p><h3>Q8 e-tron 2026</h3><div><span>Nuevo</span><strong>$ 112.000</strong></div></div>
+        </article>
+      </div>
+      <p class="catalog-status" role="status" aria-live="polite"></p>
+    </section>
+
+    <section class="locations" id="sedes" aria-labelledby="locations-title">
+      <div class="locations-heading">
+        <div>
+          <p class="overline"><span></span> Estamos cerca de ti</p>
+          <h2 id="locations-title">Nuestras <em>sedes.</em></h2>
+        </div>
+        <p>Visítanos y descubre una atención exclusiva en cada una de nuestras ubicaciones.</p>
+      </div>
+
+      <div class="locations-grid">
+        <article class="location-card">
+          <p class="location-region">Caracas</p>
+          <h3>Chacao</h3>
+          <p class="location-venue">Sambil Chacao</p>
+          <a class="location-phone" href="tel:02122665327">0212-2665327</a>
+          <button class="location-map-button" type="button" data-location="Chacao, Sambil Chacao" data-coordinates="10.489745023256654,-66.85428337057004" aria-haspopup="dialog">
+            Ver mapa <span aria-hidden="true">↗</span>
+          </button>
+        </article>
+
+        <article class="location-card">
+          <p class="location-region">Lara</p>
+          <h3>Barquisimeto</h3>
+          <p class="location-venue">Sambil Barquisimeto</p>
+          <a class="location-phone" href="tel:02122665327">0212-2665327</a>
+          <button class="location-map-button" type="button" data-location="Barquisimeto, Sambil Barquisimeto" data-coordinates="10.072350710482764,-69.29332397889956" aria-haspopup="dialog">
+            Ver mapa <span aria-hidden="true">↗</span>
+          </button>
+        </article>
+
+        <article class="location-card">
+          <p class="location-region">Pampatar</p>
+          <h3>Margarita</h3>
+          <p class="location-venue">Sambil Pampatar</p>
+          <a class="location-phone" href="tel:2665327">266-5327</a>
+          <button class="location-map-button" type="button" data-location="Margarita, Sambil Pampatar" data-coordinates="10.99702199033564,-63.81270828628625" aria-haspopup="dialog">
+            Ver mapa <span aria-hidden="true">↗</span>
+          </button>
+        </article>
+      </div>
+    </section>
+
+    <dialog class="location-dialog" aria-labelledby="location-dialog-title">
+      <div class="location-dialog-heading">
+        <h2 id="location-dialog-title"></h2>
+        <button class="location-dialog-close" type="button" aria-label="Cerrar mapa">×</button>
+      </div>
+      <iframe title="Mapa de la sede seleccionada" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <a class="location-directions" href="#" target="_blank" rel="noopener noreferrer">Abrir en Google Maps <span aria-hidden="true">↗</span></a>
+    </dialog>
   </main>
   <script src="../assets/js/script.js"></script>
 </body>
 </html>
+<!--  -->
